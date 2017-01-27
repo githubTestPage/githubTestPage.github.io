@@ -19,6 +19,7 @@ body {
 .header {
   &__sidebar {
     background-color: $color-one;
+    background: url("../img/background/footer_lodyas.png");
   }
   &__title {
     background-color: $color-two;
@@ -31,6 +32,7 @@ body {
       &-content {
         font-size: 16px;
         font-family: 'Lato', sans-serif;
+        padding-left: 10px;
       }
     }
     &-name {
@@ -44,16 +46,18 @@ body {
 
 .page-title {
   &__panel {
-    background: url("../img/background/zwartevilt.png");
+    background: url("../img/background/stardust.png");
   }
   &__content {
     background-color: $header-title;
+    box-shadow: inset 0px -15px 16px -10px rgba(255, 255, 255, 0.5), inset 0px 8px 20px -5px rgba(255, 255, 255, 0.5);
     &-text {
       font-size: 18px;
-      margin-top: 15px;
-      margin-bottom: 15px;
+      margin-top: 18px;
+      margin-bottom: 18px;
       color: #ffffff;
       font-family: 'Lato', sans-serif;
+      
 
       .icon-title {
         opacity: .3;
@@ -108,11 +112,18 @@ body {
   }
   &__sidebar {
     background-color: $sidebar-background;
+    background: url('../img/background/footer_lodyas.png');
+
   }
   &__body-content {
     background: url("../img/background/confectionary.png");
   }
 }
+.nav-pills>li.active>a:focus {
+  background: transparent;
+  color:#107385;
+}
+
 
 .tab-content {
   padding: 30px;
@@ -120,9 +131,34 @@ body {
 .fast-message {
   &__messageId {
     display: none;
+
+    &-submit-btn {
+      margin-top: 10px;
+    }
   }
   &__creatMessage {
     display: none;
   }
+}
 
+.show-message-id,
+.show-creat-message {
+  display: block;
+}
+
+.dropdown__custom-form {
+  margin-top: -1px;
+  padding: 6px 20px;
+
+  &-userId {
+    padding: 20px;
+  }
+  &-courseld {
+    .form-control {
+      z-index: 1;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    min-width: 522px;
+  }
 }
